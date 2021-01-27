@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const utils = require("./utils");
+const utils = require("utils");
 // const generateMarkdown = require("./utils/generateMarkdown);
 
 const writeFileAsync = util.promisify(fs.writeFile);
