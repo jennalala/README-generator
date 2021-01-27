@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/jennalala/README-generator/issues"
   },
-  "homepage": "https://github.com/jennalala/README-generator#readme"
+  "homepage": "https://github.com/jennalala/README-generator#readme",
+  "devDependencies": {}
 }

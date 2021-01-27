@@ -1,12 +1,11 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const utils = require("./utils/generateMarkdown");
-// const generateMarkdown = require("./utils/generateMarkdown);
+const generateMarkdown = require("./util/generateMarkdown");
+// const util = require("./util/generateMarkdown");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+// const writeFileAsync = generateMarkdown.promisify(fs.writeFile);
 
 const questions = [
-  inquirer.prompt([
 
   {
     type: "input",
@@ -85,9 +84,22 @@ const questions = [
       ],
       default: ["MIT"],
     },
-]),
+];
 
-questions()
-.then((data) => writeFileAsync("EXAMPLE-README.md", generateMarkdown(data)))
-.then(() => console.log("Successfully wrote to md file"))
-.catch((err) => console.error(err))]
+
+  // function to initialize program
+  function init() {
+      inquirer.prompt(questions).then((response) => {
+          fs.writeFileSync("generatedREADME.md", generateMarkdown(response) , function (err) {
+  
+              if (err) {
+                  console.log(err)
+              }
+              else {
+                  console.log("It works.")
+              }
+          })
+      })
+  }
+  
+  init();
