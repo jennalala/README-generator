@@ -25,7 +25,7 @@ A user can contribute by adding to the Table of Contents and creating a new sect
 
 ## ScreenShot
 
-![screenshot](./goodREADMEgen.png)
+![screenshot](Develop/goodREADMEgen.png)
 
 
 ## Questions
