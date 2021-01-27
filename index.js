@@ -1,6 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("utils/generateMarkdown.js");
+const utils = require("./utils");
+// const generateMarkdown = require("./utils/generateMarkdown);
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
   {
